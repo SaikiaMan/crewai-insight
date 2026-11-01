@@ -1,0 +1,2 @@
+usage: run.py [-h] [--case CASE] [--repeats REPEATS] [--output OUTPUT]
+run.py: error: OPENAI_API_KEY required for target and independent judge; no live results generated

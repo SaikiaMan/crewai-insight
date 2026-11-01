@@ -1,0 +1,6 @@
+-r requirements.txt
+# Requires Python >=3.10,<3.13; use a separate Python 3.12 environment.
+# The facade preserves upstream prompts and control flow.
+crewai==0.108.0
+python-dotenv==1.0.1
+# Gemini uses the standard-library REST adapter; no additional SDK required.

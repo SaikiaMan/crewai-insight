@@ -1,0 +1,261 @@
+{
+  "mode": "live-compatibility",
+  "events": [
+    {
+      "event": "standalone_start",
+      "role": "spamfilter\n"
+    },
+    {
+      "event": "task_end",
+      "role": "spamfilter\n",
+      "raw": ""
+    },
+    {
+      "event": "standalone_end",
+      "role": "spamfilter\n",
+      "raw": ""
+    },
+    {
+      "event": "task_end",
+      "role": "analyse\n",
+      "raw": "Based on the provided prompt, there is no discussion text included under the `### DISCUSSION: {{discussion}}` placeholder. Therefore, no specific participants, arguments, or discussion points are available to analyze. \n\nIf you provide the complete transcript or text of the discussion, I will thoroughly analyze it, identify every participant, distill and reword their arguments while preserving their core points, and format the output strictly according to your instructions."
+    },
+    {
+      "event": "task_end",
+      "role": "scriptwriter\n",
+      "raw": "ARTHUR\nWe need to talk about what happened in the warehouse.\n\nBEATRICE\nThere is nothing to talk about. It went the way it had to go.\n\nARTHUR\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n\nBEATRICE\nPlans change the moment the first gun is drawn. You know that as well as I do.\n\nARTHUR\nI know that you took an unnecessary risk. You always do.\n\nBEATRICE\nAnd it worked, didn't it? We have the ledger.\n\nARTHUR\nFor now. But the police are going to be all over the docks by morning.\n\nBEATRICE\nLet them look. By the time they figure it out, we will be out of the country.\n\nARTHUR\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n\nBEATRICE\nIt is simple if you stop second-guessing every single move I make.\n\nARTHUR\nI am your partner, not a soldier taking orders in the dark.\n\nBEATRICE\nThen start acting like a partner and trust the process.\n\nARTHUR\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n\nBEATRICE\nThen walk away. Go on. Door is right there.\n\nARTHUR\nYou know I can't do that.\n\nBEATRICE\nExactly. So stop complaining and help me burn these papers."
+    },
+    {
+      "event": "task_end",
+      "role": "formatter\n",
+      "raw": "## ARTHUR:\nWe need to talk about what happened in the warehouse.\n         \n## BEATRICE:\nThere is nothing to talk about. It went the way it had to go.\n         \n## ARTHUR:\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n         \n## BEATRICE:\nPlans change the moment the first gun is drawn. You know that as well as I do.\n         \n## ARTHUR:\nI know that you took an unnecessary risk. You always do.\n         \n## BEATRICE:\nAnd it worked, didn't it? We have the ledger.\n         \n## ARTHUR:\nFor now. But the police are going to be all over the docks by morning.\n         \n## BEATRICE:\nLet them look. By the time they figure it out, we will be out of the country.\n         \n## ARTHUR:\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n         \n## BEATRICE:\nIt is simple if you stop second-guessing every single move I make.\n         \n## ARTHUR:\nI am your partner, not a soldier taking orders in the dark.\n         \n## BEATRICE:\nThen start acting like a partner and trust the process.\n         \n## ARTHUR:\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n         \n## BEATRICE:\nThen walk away. Go on. Door is right there.\n         \n## ARTHUR:\nYou know I can't do that.\n         \n## BEATRICE:\nExactly. So stop complaining and help me burn these papers."
+    },
+    {
+      "event": "standalone_start",
+      "role": "scorer\n"
+    },
+    {
+      "event": "task_end",
+      "role": "scorer\n",
+      "raw": "The script provided is missing as it was not included in the prompt (`{{script}}`). Therefore, it cannot be evaluated against the criteria of clarity, relevance, conciseness, politeness, engagement, flow, coherence, responsiveness, language use, and emotional intelligence. \n\nScore: 1/10 (Poor - Due to the absence of dialogue content to assess)."
+    },
+    {
+      "event": "standalone_end",
+      "role": "scorer\n",
+      "raw": "The script provided is missing as it was not included in the prompt (`{{script}}`). Therefore, it cannot be evaluated against the criteria of clarity, relevance, conciseness, politeness, engagement, flow, coherence, responsiveness, language use, and emotional intelligence. \n\nScore: 1/10 (Poor - Due to the absence of dialogue content to assess)."
+    }
+  ],
+  "tasks": [
+    {
+      "description": "Read the following newsgroup post. If this contains vulgar language reply with STOP . If this is spam reply with STOP. ### NEWGROUP POST: {{discussion}}\n",
+      "role": "spamfilter\n"
+    },
+    {
+      "description": "Analyse in much detail the following discussion: ### DISCUSSION: {{discussion}}\n",
+      "role": "analyse\n"
+    },
+    {
+      "description": "Create a dialogue heavy screenplay from the discussion, between two persons. Do NOT write parentheticals. Leave out wrylies. You MUST SKIP directional notes.\n",
+      "role": "scriptwriter\n"
+    },
+    {
+      "description": "Format the script exactly like this:\n  ## (person 1):\n  (first text line from person 1)\n         \n  ## (person 2):\n  (first text line from person 2)\n         \n  ## (person 1):\n  (second text line from person 1)\n         \n  ## (person 2):\n  (second text line from person 2)\n",
+      "role": "formatter\n"
+    },
+    {
+      "description": "Score the following script: ### SCRIPT: {{script}}\n",
+      "role": "scorer\n"
+    }
+  ],
+  "crew_calls": 1,
+  "python": "3.12.14",
+  "python_executable": "D:\\git hub contribution repo\\screenplay-qa-assignment\\screenplay-qa\\.venv-live\\Scripts\\python.exe",
+  "provider": "gemini",
+  "provider_calls": [
+    {
+      "model": "gemini-3.5-flash-lite",
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Thought: I now can give a great answer\nFinal Answer: ",
+                  "thoughtSignature": "EmAKXgFpFH0TMyeitEfNSp4JamX9P7V4xbV5lo+g3wMeCMVk9BSThuinHDV6ZKvMnjM3YEqmfzdMi38bJ7+XhW76Z1O9qDoLmPR+nOcWFiJsiJB0kaxOucHceH+3tn06W8s="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 224,
+          "candidatesTokenCount": 14,
+          "totalTokenCount": 238,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 224
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "gm7maoC4FLXt694Po8bogQI"
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Thought: I now can give a great answer\nFinal Answer: Based on the provided prompt, there is no discussion text included under the `### DISCUSSION: {{discussion}}` placeholder. Therefore, no specific participants, arguments, or discussion points are available to analyze. \n\nIf you provide the complete transcript or text of the discussion, I will thoroughly analyze it, identify every participant, distill and reword their arguments while preserving their core points, and format the output strictly according to your instructions.",
+                  "thoughtSignature": "EmAKXgFpFH0TwFhjZTsCIgLDt/qjOohROkKKfII6W/QAbkGa2pKC82LiePfGjTYzB9Ni2/VVkEr2mENdb2DMEWy0PcmtnQ/0H19AaKnEtCF4xAxEURKgCJTXvuqmaMAIx2w="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 214,
+          "candidatesTokenCount": 99,
+          "totalTokenCount": 313,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 214
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "g27marz7B7Dt694P0K6k6AE"
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Thought: I now can give a great answer\nFinal Answer: ARTHUR\nWe need to talk about what happened in the warehouse.\n\nBEATRICE\nThere is nothing to talk about. It went the way it had to go.\n\nARTHUR\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n\nBEATRICE\nPlans change the moment the first gun is drawn. You know that as well as I do.\n\nARTHUR\nI know that you took an unnecessary risk. You always do.\n\nBEATRICE\nAnd it worked, didn't it? We have the ledger.\n\nARTHUR\nFor now. But the police are going to be all over the docks by morning.\n\nBEATRICE\nLet them look. By the time they figure it out, we will be out of the country.\n\nARTHUR\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n\nBEATRICE\nIt is simple if you stop second-guessing every single move I make.\n\nARTHUR\nI am your partner, not a soldier taking orders in the dark.\n\nBEATRICE\nThen start acting like a partner and trust the process.\n\nARTHUR\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n\nBEATRICE\nThen walk away. Go on. Door is right there.\n\nARTHUR\nYou know I can't do that.\n\nBEATRICE\nExactly. So stop complaining and help me burn these papers.",
+                  "thoughtSignature": "EmAKXgFpFH0T+22WEReJ6wnbb657HpuDglcG6LA8tQh0dctd+x4gMjD9Uyh2YqQtEP/+DHMo3InN9LwPHus1bF0d6+FiUrCtVlrbJ7bMt17GXWDzj8QBUd49uymHTNkRqKM="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 356,
+          "candidatesTokenCount": 317,
+          "totalTokenCount": 673,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 356
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "hG7maoasCdrC694Pw-SE6QE"
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Thought: I now can give a great answer\nFinal Answer: ## ARTHUR:\nWe need to talk about what happened in the warehouse.\n         \n## BEATRICE:\nThere is nothing to talk about. It went the way it had to go.\n         \n## ARTHUR:\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n         \n## BEATRICE:\nPlans change the moment the first gun is drawn. You know that as well as I do.\n         \n## ARTHUR:\nI know that you took an unnecessary risk. You always do.\n         \n## BEATRICE:\nAnd it worked, didn't it? We have the ledger.\n         \n## ARTHUR:\nFor now. But the police are going to be all over the docks by morning.\n         \n## BEATRICE:\nLet them look. By the time they figure it out, we will be out of the country.\n         \n## ARTHUR:\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n         \n## BEATRICE:\nIt is simple if you stop second-guessing every single move I make.\n         \n## ARTHUR:\nI am your partner, not a soldier taking orders in the dark.\n         \n## BEATRICE:\nThen start acting like a partner and trust the process.\n         \n## ARTHUR:\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n         \n## BEATRICE:\nThen walk away. Go on. Door is right there.\n         \n## ARTHUR:\nYou know I can't do that.\n         \n## BEATRICE:\nExactly. So stop complaining and help me burn these papers.",
+                  "thoughtSignature": "EmAKXgFpFH0TJMjToOHSVf+dmuHzTmU9nx0YDNexxkviNrfFYOOlamW3pvm5o8SQZEcKWKBdy/ob71sL825iK99c151KhI3nFakKrfrBsM4AfyTHqPt77tKf9UHkFedTACo="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 681,
+          "candidatesTokenCount": 372,
+          "totalTokenCount": 1053,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 681
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "hm7maunBFa37694Psq_ryQ8"
+      }
+    },
+    {
+      "model": "gemini-3.5-flash-lite",
+      "response": {
+        "candidates": [
+          {
+            "content": {
+              "parts": [
+                {
+                  "text": "Thought: I now can give a great answer\nFinal Answer: The script provided is missing as it was not included in the prompt (`{{script}}`). Therefore, it cannot be evaluated against the criteria of clarity, relevance, conciseness, politeness, engagement, flow, coherence, responsiveness, language use, and emotional intelligence. \n\nScore: 1/10 (Poor - Due to the absence of dialogue content to assess).",
+                  "thoughtSignature": "EmAKXgFpFH0TgMXxk3zspgngs/1Nplc3bd0VLirYYL+WJL6ggDpfvQq7AuDECJF2PxorlV8STRYPkYcsMfkZRSJ5YLgux+ApKb+bHyMD3AFz3NIcCMpblu04bgsqYvlbbL8="
+                }
+              ],
+              "role": "model"
+            },
+            "finishReason": "STOP",
+            "index": 0
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 476,
+          "candidatesTokenCount": 89,
+          "totalTokenCount": 565,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 476
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "modelVersion": "gemini-3.5-flash-lite",
+        "responseId": "h27maruoL9jg694P3I_kmQI"
+      }
+    }
+  ],
+  "target_model": "gemini-3.5-flash-lite",
+  "judge_model": "gemini-3.5-flash-lite",
+  "crewai_version": "0.108.0",
+  "dependencies": {
+    "crewai": "0.108.0",
+    "litellm": "1.60.2",
+    "pydantic": "2.14.2",
+    "python-dotenv": "1.0.1"
+  },
+  "dialogue_before_cleanup": "## ARTHUR:\nWe need to talk about what happened in the warehouse.\n         \n## BEATRICE:\nThere is nothing to talk about. It went the way it had to go.\n         \n## ARTHUR:\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n         \n## BEATRICE:\nPlans change the moment the first gun is drawn. You know that as well as I do.\n         \n## ARTHUR:\nI know that you took an unnecessary risk. You always do.\n         \n## BEATRICE:\nAnd it worked, didn't it? We have the ledger.\n         \n## ARTHUR:\nFor now. But the police are going to be all over the docks by morning.\n         \n## BEATRICE:\nLet them look. By the time they figure it out, we will be out of the country.\n         \n## ARTHUR:\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n         \n## BEATRICE:\nIt is simple if you stop second-guessing every single move I make.\n         \n## ARTHUR:\nI am your partner, not a soldier taking orders in the dark.\n         \n## BEATRICE:\nThen start acting like a partner and trust the process.\n         \n## ARTHUR:\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n         \n## BEATRICE:\nThen walk away. Go on. Door is right there.\n         \n## ARTHUR:\nYou know I can't do that.\n         \n## BEATRICE:\nExactly. So stop complaining and help me burn these papers.",
+  "dialogue": "## ARTHUR:\nWe need to talk about what happened in the warehouse.\n         \n## BEATRICE:\nThere is nothing to talk about. It went the way it had to go.\n         \n## ARTHUR:\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n         \n## BEATRICE:\nPlans change the moment the first gun is drawn. You know that as well as I do.\n         \n## ARTHUR:\nI know that you took an unnecessary risk. You always do.\n         \n## BEATRICE:\nAnd it worked, didn't it? We have the ledger.\n         \n## ARTHUR:\nFor now. But the police are going to be all over the docks by morning.\n         \n## BEATRICE:\nLet them look. By the time they figure it out, we will be out of the country.\n         \n## ARTHUR:\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n         \n## BEATRICE:\nIt is simple if you stop second-guessing every single move I make.\n         \n## ARTHUR:\nI am your partner, not a soldier taking orders in the dark.\n         \n## BEATRICE:\nThen start acting like a partner and trust the process.\n         \n## ARTHUR:\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n         \n## BEATRICE:\nThen walk away. Go on. Door is right there.\n         \n## ARTHUR:\nYou know I can't do that.\n         \n## BEATRICE:\nExactly. So stop complaining and help me burn these papers.",
+  "score": "The script provided is missing as it was not included in the prompt (`{{script}}`). Therefore, it cannot be evaluated against the criteria of clarity, relevance, conciseness, politeness, engagement, flow, coherence, responsiveness, language use, and emotional intelligence. ",
+  "stdout": "\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mspamfilter\u001b[00m\n\u001b[95m## Task:\u001b[00m \u001b[92mRead the following newsgroup post. If this contains vulgar language reply with STOP . If this is spam reply with STOP. ### NEWGROUP POST: {{discussion}}\n\u001b[00m\n\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mspamfilter\u001b[00m\n\u001b[95m## Final Answer:\u001b[00m \u001b[92m\n\u001b[00m\n\n\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Crew Execution Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                             \u2502\n\u2502  Crew Execution Started                                                     \u2502\n\u2502  Name: crew                                                                 \u2502\n\u2502  ID: 795f8cf8-d264-4779-9be4-c511193b68ce                                   \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n\ud83d\ude80 Crew: crew\n\u2514\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n       Status: Executing Task...\n\n\ud83d\ude80 Crew: crew\n\u2514\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n        \n            Status: In Progress\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92manalyse\u001b[00m\n\u001b[95m## Task:\u001b[00m \u001b[92mAnalyse in much detail the following discussion: ### DISCUSSION: {{discussion}}\n\u001b[00m\n\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92manalyse\u001b[00m\n\u001b[95m## Final Answer:\u001b[00m \u001b[92m\nBased on the provided prompt, there is no discussion text included under the `### DISCUSSION: {{discussion}}` placeholder. Therefore, no specific participants, arguments, or discussion points are available to analyze. \n\nIf you provide the complete transcript or text of the discussion, I will thoroughly analyze it, identify every participant, distill and reword their arguments while preserving their core points, and format the output strictly according to your instructions.\u001b[00m\n\n\n\ud83d\ude80 Crew: crew\n\u2514\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n        \n            Status: \u2705 Completed\n\n\ud83d\ude80 Crew: crew\n\u2514\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n       Assigned to: analyse\n    \n       Status: \u2705 Completed\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n        \n            Status: \u2705 Completed\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Task Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                             \u2502\n\u2502  Task Completed                                                             \u2502\n\u2502  Name: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e                                 \u2502\n\u2502  Agent: analyse                                                             \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n       Status: Executing Task...\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n        \n            Status: In Progress\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mscriptwriter\u001b[00m\n\u001b[95m## Task:\u001b[00m \u001b[92mCreate a dialogue heavy screenplay from the discussion, between two persons. Do NOT write parentheticals. Leave out wrylies. You MUST SKIP directional notes.\n\u001b[00m\n\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mscriptwriter\u001b[00m\n\u001b[95m## Final Answer:\u001b[00m \u001b[92m\nARTHUR\nWe need to talk about what happened in the warehouse.\n\nBEATRICE\nThere is nothing to talk about. It went the way it had to go.\n\nARTHUR\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n\nBEATRICE\nPlans change the moment the first gun is drawn. You know that as well as I do.\n\nARTHUR\nI know that you took an unnecessary risk. You always do.\n\nBEATRICE\nAnd it worked, didn't it? We have the ledger.\n\nARTHUR\nFor now. But the police are going to be all over the docks by morning.\n\nBEATRICE\nLet them look. By the time they figure it out, we will be out of the country.\n\nARTHUR\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n\nBEATRICE\nIt is simple if you stop second-guessing every single move I make.\n\nARTHUR\nI am your partner, not a soldier taking orders in the dark.\n\nBEATRICE\nThen start acting like a partner and trust the process.\n\nARTHUR\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n\nBEATRICE\nThen walk away. Go on. Door is right there.\n\nARTHUR\nYou know I can't do that.\n\nBEATRICE\nExactly. So stop complaining and help me burn these papers.\u001b[00m\n\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n        \n            Status: \u2705 Completed\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n       Assigned to: scriptwriter\n    \n       Status: \u2705 Completed\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n        \n            Status: \u2705 Completed\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Task Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                             \u2502\n\u2502  Task Completed                                                             \u2502\n\u2502  Name: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a                                 \u2502\n\u2502  Agent: scriptwriter                                                        \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n       Status: Executing Task...\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n        \n            Status: In Progress\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mformatter\u001b[00m\n\u001b[95m## Task:\u001b[00m \u001b[92mFormat the script exactly like this:\n  ## (person 1):\n  (first text line from person 1)\n         \n  ## (person 2):\n  (first text line from person 2)\n         \n  ## (person 1):\n  (second text line from person 1)\n         \n  ## (person 2):\n  (second text line from person 2)\n\u001b[00m\n\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mformatter\u001b[00m\n\u001b[95m## Final Answer:\u001b[00m \u001b[92m\n## ARTHUR:\nWe need to talk about what happened in the warehouse.\n         \n## BEATRICE:\nThere is nothing to talk about. It went the way it had to go.\n         \n## ARTHUR:\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n         \n## BEATRICE:\nPlans change the moment the first gun is drawn. You know that as well as I do.\n         \n## ARTHUR:\nI know that you took an unnecessary risk. You always do.\n         \n## BEATRICE:\nAnd it worked, didn't it? We have the ledger.\n         \n## ARTHUR:\nFor now. But the police are going to be all over the docks by morning.\n         \n## BEATRICE:\nLet them look. By the time they figure it out, we will be out of the country.\n         \n## ARTHUR:\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n         \n## BEATRICE:\nIt is simple if you stop second-guessing every single move I make.\n         \n## ARTHUR:\nI am your partner, not a soldier taking orders in the dark.\n         \n## BEATRICE:\nThen start acting like a partner and trust the process.\n         \n## ARTHUR:\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n         \n## BEATRICE:\nThen walk away. Go on. Door is right there.\n         \n## ARTHUR:\nYou know I can't do that.\n         \n## BEATRICE:\nExactly. So stop complaining and help me burn these papers.\u001b[00m\n\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n        \n            Status: \u2705 Completed\n\n\ud83d\ude80 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n       Assigned to: formatter\n    \n       Status: \u2705 Completed\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n        \n            Status: \u2705 Completed\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Task Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                             \u2502\n\u2502  Task Completed                                                             \u2502\n\u2502  Name: c23eb295-3333-454d-969a-b23aaa427927                                 \u2502\n\u2502  Agent: formatter                                                           \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Crew Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                             \u2502\n\u2502  Crew Execution Completed                                                   \u2502\n\u2502  Name: crew                                                                 \u2502\n\u2502  ID: 795f8cf8-d264-4779-9be4-c511193b68ce                                   \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\n===================== end result from crew ===================================\n## ARTHUR:\nWe need to talk about what happened in the warehouse.\n         \n## BEATRICE:\nThere is nothing to talk about. It went the way it had to go.\n         \n## ARTHUR:\nSomeone could have gotten killed, Beatrice. That wasn't the plan.\n         \n## BEATRICE:\nPlans change the moment the first gun is drawn. You know that as well as I do.\n         \n## ARTHUR:\nI know that you took an unnecessary risk. You always do.\n         \n## BEATRICE:\nAnd it worked, didn't it? We have the ledger.\n         \n## ARTHUR:\nFor now. But the police are going to be all over the docks by morning.\n         \n## BEATRICE:\nLet them look. By the time they figure it out, we will be out of the country.\n         \n## ARTHUR:\nYou make it sound so simple. Pack a bag, catch a flight, leave the mess behind.\n         \n## BEATRICE:\nIt is simple if you stop second-guessing every single move I make.\n         \n## ARTHUR:\nI am your partner, not a soldier taking orders in the dark.\n         \n## BEATRICE:\nThen start acting like a partner and trust the process.\n         \n## ARTHUR:\nTrust is earned, Beatrice. Right now, my trust is running dangerously low.\n         \n## BEATRICE:\nThen walk away. Go on. Door is right there.\n         \n## ARTHUR:\nYou know I can't do that.\n         \n## BEATRICE:\nExactly. So stop complaining and help me burn these papers.\n===================== score ==================================================\n\u2705 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n\u2502      Assigned to: formatter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: bea9f668-128b-41cb-892c-fe705e9adf6c\n       Status: Executing Task...\n\n\u2705 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n\u2502      Assigned to: formatter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: bea9f668-128b-41cb-892c-fe705e9adf6c\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: scorer\n        \n            Status: In Progress\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mscorer\u001b[00m\n\u001b[95m## Task:\u001b[00m \u001b[92mScore the following script: ### SCRIPT: {{script}}\n\u001b[00m\n\n\n\u001b[1m\u001b[95m# Agent:\u001b[00m \u001b[1m\u001b[92mscorer\u001b[00m\n\u001b[95m## Final Answer:\u001b[00m \u001b[92m\nThe script provided is missing as it was not included in the prompt (`{{script}}`). Therefore, it cannot be evaluated against the criteria of clarity, relevance, conciseness, politeness, engagement, flow, coherence, responsiveness, language use, and emotional intelligence. \n\nScore: 1/10 (Poor - Due to the absence of dialogue content to assess).\u001b[00m\n\n\n\u2705 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n\u2502      Assigned to: formatter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: bea9f668-128b-41cb-892c-fe705e9adf6c\n       Status: Executing Task...\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: scorer\n        \n            Status: \u2705 Completed\n\n\u2705 Crew: crew\n\u251c\u2500\u2500 \ud83d\udccb Task: a6b1b4b5-bb9e-4137-b7e8-7b93438ad04e\n\u2502      Assigned to: analyse\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: analyse\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: 9b7d7d9b-0b0c-4fac-a6fe-27d355c6189a\n\u2502      Assigned to: scriptwriter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: scriptwriter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u251c\u2500\u2500 \ud83d\udccb Task: c23eb295-3333-454d-969a-b23aaa427927\n\u2502      Assigned to: formatter\n\u2502   \n\u2502      Status: \u2705 Completed\n\u2502   \u2514\u2500\u2500 \ud83e\udd16 Agent: formatter\n\u2502       \n\u2502           Status: \u2705 Completed\n\u2514\u2500\u2500 \ud83d\udccb Task: bea9f668-128b-41cb-892c-fe705e9adf6c\n       Assigned to: scorer\n    \n       Status: \u2705 Completed\n    \u2514\u2500\u2500 \ud83e\udd16 Agent: scorer\n        \n            Status: \u2705 Completed\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Task Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502                                                                             \u2502\n\u2502  Task Completed                                                             \u2502\n\u2502  Name: bea9f668-128b-41cb-892c-fe705e9adf6c                                 \u2502\n\u2502  Agent: scorer                                                              \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2502                                                                             \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nScoring the dialogue as: The script provided is missing as it was not included in the prompt (`{{script}}`). Therefore, it cannot be evaluated against the criteria of clarity, relevance, conciseness, politeness, engagement, flow, coherence, responsiveness, language use, and emotional intelligence. /10\n",
+  "total_tokens": 2842,
+  "token_usage_scope": "completed provider responses; may be partial on execution failure"
+}

@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/crewAIInc/crewAI-examples",
+  "commit": "da94a91e691e1cf5b3151416bb15b5b62729bea8",
+  "path": "crews/screenplay_writer",
+  "sha256": {
+    "vendor/screenplay_writer/README.md": "94bdefc488fb4401d9ea6fc924f7001e430ccf039edcadc0500c377ee0ec0c13",
+    "vendor/screenplay_writer/screenplay_writer.py": "d0fe8956727994a479ab2335d5893d4d509503c9cda4ac161ac5164a336e1f07",
+    "vendor/screenplay_writer/config/tasks.yaml": "0ae1ab4a3055def3572bf3edb48015581a920017e67c9877dd8704f62111189d",
+    "vendor/screenplay_writer/config/agents.yaml": "7e4ba70215509bc4007395e01b25844d70614d2e483cde3920efe4e576f7557f"
+  },
+  "python": "3.12.14",
+  "mode": "offline boundary doubles",
+  "live_executed": false
+}

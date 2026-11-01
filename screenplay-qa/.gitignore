@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+results/
+
+.venv-live/
+.uv-cache/
+.python/
+
+.env.*
+!.env.example
+*.pyc

@@ -1,0 +1,18 @@
+{
+  "requested_cases": [
+    "TC-002",
+    "TC-003",
+    "TC-004",
+    "TC-005",
+    "TC-006",
+    "TC-007",
+    "TC-008",
+    "TC-009",
+    "TC-010",
+    "TC-011"
+  ],
+  "requested_repeats": 1,
+  "executed_runs": 10,
+  "stopped_on_exhausted_quota": false,
+  "skipped_cases": []
+}

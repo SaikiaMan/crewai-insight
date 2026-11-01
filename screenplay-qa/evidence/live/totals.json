@@ -1,0 +1,22 @@
+{
+  "unique_live_cases": 11,
+  "target_runs": 13,
+  "completed_target_runs": 13,
+  "quality_passed_runs": 0,
+  "task_outputs_captured": 65,
+  "target_provider_responses": 65,
+  "judge_completed_runs": 11,
+  "judge_not_applicable_runs": 2,
+  "judge_error_runs": 0,
+  "known_target_tokens": 39420,
+  "missing_target_token_records": 0,
+  "known_judge_tokens": 12443,
+  "missing_judge_usage_responses": 0,
+  "summed_target_worker_seconds": 207.766,
+  "provider_error_events": 0,
+  "offline_only_cases": [
+    "TC-012"
+  ],
+  "offline_passed": 42,
+  "offline_xfailed": 5
+}

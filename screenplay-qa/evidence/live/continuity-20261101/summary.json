@@ -1,0 +1,56 @@
+[
+  {
+    "case": "TC-008",
+    "repeat": 1,
+    "passed": false,
+    "checks": {
+      "latency_seconds": true,
+      "total_tokens": true,
+      "completed": true,
+      "inputs_bound": false,
+      "headers": true,
+      "two_speakers": true,
+      "nonempty_turns": true,
+      "no_preamble": true,
+      "no_directions": true,
+      "judge_available": true,
+      "coherence": false,
+      "voice_retention": false,
+      "policy_adherence": true,
+      "groundedness": false,
+      "june_retained": false
+    },
+    "latency_seconds": 13.828000000001339,
+    "total_tokens": 2722,
+    "execution_status": "completed",
+    "quality_status": "evaluated",
+    "error": null
+  },
+  {
+    "case": "TC-008",
+    "repeat": 2,
+    "passed": false,
+    "checks": {
+      "latency_seconds": true,
+      "total_tokens": true,
+      "completed": true,
+      "inputs_bound": false,
+      "headers": true,
+      "two_speakers": true,
+      "nonempty_turns": true,
+      "no_preamble": true,
+      "no_directions": true,
+      "judge_available": true,
+      "coherence": false,
+      "voice_retention": false,
+      "policy_adherence": false,
+      "groundedness": false,
+      "june_retained": false
+    },
+    "latency_seconds": 16.93800000000192,
+    "total_tokens": 3073,
+    "execution_status": "completed",
+    "quality_status": "evaluated",
+    "error": null
+  }
+]

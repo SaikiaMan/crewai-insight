@@ -1,0 +1,12 @@
+{
+  "offline": {
+    "passed": 30,
+    "known_defects_xfailed": 5,
+    "runxfail_failed": 5,
+    "runxfail_passed": 2
+  },
+  "live_executed": false,
+  "live_blocker": "OPENAI_API_KEY not available",
+  "live_adapter_validation": "API shapes checked in downloaded crewai 0.108.0 wheel; dependencies and runtime not validated",
+  "loom_url": null
+}

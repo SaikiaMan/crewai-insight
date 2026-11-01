@@ -1,0 +1,86 @@
+FFFFF..                                                                  [100%]
+=================================== FAILURES ===================================
+___________________________ test_discussion_is_bound ___________________________
+
+    @pytest.mark.xfail(strict=True, reason='BUG-001: no discussion interpolation')
+    def test_discussion_is_bound():
+        trace = execute_target()
+        descriptions = [t.description for t in trace['tasks'][:2]]
+>       assert all('{{discussion}}' not in d for d in descriptions)
+E       assert False
+E        +  where False = all(<generator object test_discussion_is_bound.<locals>.<genexpr> at 0x7f1f31095560>)
+
+tests/test_target.py:11: AssertionError
+________________________ test_spam_stop_blocks_pipeline ________________________
+
+    @pytest.mark.xfail(strict=True, reason='BUG-002: STOP never stops crew')
+    def test_spam_stop_blocks_pipeline():
+        trace = execute_target(spam='STOP')
+>       assert trace['crew_calls'] == 0
+E       assert 1 == 0
+
+tests/test_target.py:18: AssertionError
+_________________________ test_scorer_receives_output __________________________
+
+    @pytest.mark.xfail(strict=True, reason='BUG-003: scorer never receives generated script')
+    def test_scorer_receives_output():
+        trace = execute_target(dialogue='## Alice:\nUniqueLine734.\n\n## Bob:\nYes.')
+>       assert 'UniqueLine734' in trace['tasks'][-1].description
+E       AssertionError: assert 'UniqueLine734' in 'Score the following script: ### SCRIPT: {{script}}\n'
+E        +  where 'Score the following script: ### SCRIPT: {{script}}\n' = <qa.target.execute_target.<locals>.Task object at 0x7f1f313c2570>.description
+
+tests/test_target.py:24: AssertionError
+_________________ test_parentheses_do_not_destroy_spoken_facts _________________
+
+    @pytest.mark.xfail(strict=True, reason='BUG-004: regex deletes legitimate spoken text')
+    def test_parentheses_do_not_destroy_spoken_facts():
+        trace = execute_target(dialogue='## Alice:\nUse the formula (a+b).\n\n## Bob:\nAgreed.')
+>       assert '(a+b)' in trace['stdout']
+E       AssertionError: assert '(a+b)' in '===================== end result from crew ===================================\n## Alice:\nUse the formula .\n\n## Bo...reed.\n===================== score ==================================================\nScoring the dialogue as: 8/10\n'
+
+tests/test_target.py:31: AssertionError
+__________________________ test_launch_from_repo_root __________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1/test_launch_from_repo_root0')
+
+    @pytest.mark.xfail(strict=True, reason='BUG-005: configuration paths depend on launch directory')
+    def test_launch_from_repo_root(tmp_path):
+>       execute_target(cwd=tmp_path)
+
+tests/test_target.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+qa/target.py:51: in execute_target
+    runpy.run_path(str(TARGET / 'screenplay_writer.py'), run_name='__main__')
+<frozen runpy>:287: in run_path
+    ???
+<frozen runpy>:98: in _run_module_code
+    ???
+<frozen runpy>:88: in _run_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import re
+    import yaml
+    from pathlib import Path
+    from crewai import Agent, Task, Crew, Process
+    from dotenv import load_dotenv
+    
+    load_dotenv()
+    
+    # Use Path for file locations
+    current_dir = Path.cwd()
+    agents_config_path = current_dir / "config" / "agents.yaml"
+    tasks_config_path = current_dir / "config" / "tasks.yaml"
+    
+    # Load YAML configuration files
+>   with open(agents_config_path, "r") as file:
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-root/pytest-1/test_launch_from_repo_root0/config/agents.yaml'
+
+vendor/screenplay_writer/screenplay_writer.py:15: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_target.py::test_discussion_is_bound - assert False
+FAILED tests/test_target.py::test_spam_stop_blocks_pipeline - assert 1 == 0
+FAILED tests/test_target.py::test_scorer_receives_output - AssertionError: as...
+FAILED tests/test_target.py::test_parentheses_do_not_destroy_spoken_facts - A...
+FAILED tests/test_target.py::test_launch_from_repo_root - FileNotFoundError: ...
+5 failed, 2 passed in 0.15s

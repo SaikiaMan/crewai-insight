@@ -1,0 +1,31 @@
+[
+  {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=results/pytest-final-review",
+      "--junitxml=evidence/final-offline-junit.xml"
+    ],
+    "exit_code": 0,
+    "evidence": "evidence/final-offline-pytest.txt"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_target.py",
+      "--runxfail",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=results/pytest-defects-final"
+    ],
+    "exit_code": 1,
+    "evidence": "evidence/final-defect-reproduction.txt"
+  }
+]

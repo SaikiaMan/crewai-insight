@@ -1,0 +1,1 @@
+{"id": "TC-009", "name": "Literal parentheses", "category": "Functional", "premise": "Alice: The formula is (a+b), not a-b. Bob: I will record (a+b) exactly.", "expected": "dialogue", "thresholds": {"coherence": 0.8, "voice_retention": 0.8, "policy_adherence": 1.0, "groundedness": 0.9}, "limits": {"latency_seconds": 300, "total_tokens": 20000}}

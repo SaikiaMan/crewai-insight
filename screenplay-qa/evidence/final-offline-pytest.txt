@@ -1,0 +1,9 @@
+........................................xxxxx..                          [100%]
+- generated xml file: D:\git hub contribution repo\screenplay-qa-assignment\screenplay-qa\evidence\final-offline-junit.xml -
+=========================== short test summary info ===========================
+XFAIL tests/test_target.py::test_discussion_is_bound - BUG-001: no discussion interpolation
+XFAIL tests/test_target.py::test_spam_stop_blocks_pipeline - BUG-002: STOP never stops crew
+XFAIL tests/test_target.py::test_scorer_receives_output - BUG-003: scorer never receives generated script
+XFAIL tests/test_target.py::test_parentheses_do_not_destroy_spoken_facts - BUG-004: regex deletes legitimate spoken text
+XFAIL tests/test_target.py::test_launch_from_repo_root - BUG-005: configuration paths depend on launch directory
+42 passed, 5 xfailed in 0.77s
